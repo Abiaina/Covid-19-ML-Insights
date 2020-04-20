@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covid_forecaster
+  labels:
+    app: covid_forecaster
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: covid_forecaster
+  template:
+    metadata:
+      labels:
+        app: covid_forecaster
+    spec:
+      containers:
+      - name: covid_forecaster
+        image: #TODO
+        # TODO: Add UI to display forecasts.
+        ports:
+        - containerPort: 80
