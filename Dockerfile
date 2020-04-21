@@ -2,7 +2,7 @@ FROM python:3.7-slim-stretch
 
 ARG UID=10001
 ARG GID=10001
-ARG NAME=p2p
+ARG NAME=covid
 
 # Creates a User/Group with uid/gid 10001 that can r/w/e to /p2p directory.
 RUN groupadd --gid "${GID}" "${NAME}" \
@@ -15,4 +15,4 @@ COPY src .
 RUN pip install -r requirements.txt
 USER "${NAME}"
 RUN ls
-CMD ["python", "api.py"]
+CMD ["python", "covid_forecaster.py"]
