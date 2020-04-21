@@ -1,0 +1,8 @@
+stages:
+- test_stage
+
+build_dev:
+  stage: test_stage
+  script:
+  - echo "the pipeline is alive!"
+  
