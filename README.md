@@ -23,4 +23,4 @@ Daily time series summary tables, including confirmed, deaths and recovered. All
 1. `jupyter notebook ./src/US_Covid_19_Cases_Forecast.ipynb`
 
 ### US Cases 30 Day Forecast
-![US Cases 30 Day Forecast]('static_images/covid_us_cases_30_day_forecast.png')
+![US Cases 30 Day Forecast]('covid_us_cases_30_day_forecast.png')
