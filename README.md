@@ -18,7 +18,9 @@ Implemented with Python 3.7.4, FacebookProphet, and (external database)[data-sou
 ## Time Series Summary of Covid
 Daily time series summary tables, including confirmed, deaths and recovered. All data are from the daily case report ([Source](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)).
 
-## Company Barcode Data Source
-### EANdata API
-### UPC Lookup Database API
+# Run with Jupyter Notebook
+1. `pip install -r requirements.txt`
+1. `jupyter notebook ./src/US_Covid_19_Cases_Forecast.ipynb`
 
+### US Cases 30 Day Forecast
+![US Cases 30 Day Forecast]('./static_images/covid_us_cases_30_day_forecast.png')

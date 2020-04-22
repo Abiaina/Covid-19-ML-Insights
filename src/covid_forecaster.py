@@ -1,7 +1,9 @@
 import csv
-import pandas as pd
-import numpy
 from fbprophet import Prophet
+from fbprophet.plot import plot_plotly
+import numpy
+import pandas as pd
+import plotly.offline as py
 
 # Gets all cases in world by country and date.
 full_set = pd.read_csv('./data_sets/time_series_covid19_confirmed_US.csv')
@@ -23,34 +25,21 @@ df = pd.DataFrame(only_date_cases_us_set)
 df.to_csv('./modified_us_covid19_confirmed_cases.csv')
 
 df_ds_y = pd.read_csv('./modified_us_covid19_confirmed_cases.csv', names=['ds', 'y'])
-print(df_ds_y.head())
 df_ds_y = df_ds_y[df_ds_y.y.notnull()]
 df_ds_y = df_ds_y[df_ds_y.ds.notnull()]
 
-# print(df)
-# df.to_list()
-# df.columns = ["y"]
-
-# split_data = df["Capital_State"].str.split(" ")
-# data = split_data.to_list()
-# names = ["Capital", "State"]
-
-# new_df = pd.DataFrame(data, columns=names)
-
-
-# df["y"]= df["y"].astype(str) 
-
-# print(df)
-# print(df.columns)
-# df[['ds']] = df.y.str.split(" ",expand=True,)
-# print(df.head())
-
 m = Prophet()
-# only_date_cases_us_set.rename(columns={"A": "a", "B": "c"})
 m.fit(df_ds_y)
-future = m.make_future_dataframe(periods=365)
+
+# 30 Day prediction.
+future = m.make_future_dataframe(periods=30)
 future.tail()
 forecast = m.predict(future)
 forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
-fig1 = m.plot(forecast)
-# Create Table with Total Cases and Date by US region/state.
+fig1 = m.plot(forecast, xlabel='Date', ylabel='Number of Covid Cases (1000000)')
+ax = fig1.gca()
+ax.set_title("30 Day US Covid Cases Forecast", size=34)
+ax.set_xlabel("X", size=25)
+ax.set_ylabel("Y", size=25)
+ax.tick_params(axis="x", labelsize=24)
+ax.tick_params(axis="y", labelsize=24)
