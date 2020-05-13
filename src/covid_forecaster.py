@@ -39,7 +39,11 @@ forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
 fig1 = m.plot(forecast, xlabel='Date', ylabel='Number of Covid Cases (1000000)')
 ax = fig1.gca()
 ax.set_title("30 Day US Covid Cases Forecast", size=34)
-ax.set_xlabel("X", size=25)
-ax.set_ylabel("Y", size=25)
+ax.set_xlabel("Date (Year-Month-Day)", size=25)
+ax.set_ylabel("Cases (1,000,000)", size=25)
 ax.tick_params(axis="x", labelsize=24)
 ax.tick_params(axis="y", labelsize=24)
+
+# TODO: Print out today's date.
+# TODO: Print out today's forecasted cases.
+# TODO: Print out actual cases per CDC/WHO tracker.

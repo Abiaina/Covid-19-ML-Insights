@@ -22,8 +22,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       
-    - name: Echo the greeting's time
+    - name: Run Jupyter Notebook
     # Runs a single command using the runners shell
-      run: echo "if you like it check on it"
+      run: pip install -r requirements.txt
 
    

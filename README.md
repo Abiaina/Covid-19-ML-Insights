@@ -25,4 +25,8 @@ Daily time series summary tables, including confirmed, deaths and recovered. All
 
 # Forecast Graphs
 ## US Cases 30 Day Forecast
+#### Forecast with data until May 12 2020
+![US Cases 30 Day Forecast](./static_images/covid_us_cases_30_day_forecast_5_12_2020.png?raw=true "US Cases 30 Day Forecast")
+
+#### Forecast with data until April 2020
 ![US Cases 30 Day Forecast](./static_images/covid_us_cases_30_day_forecast.png?raw=true "US Cases 30 Day Forecast")
