@@ -4,12 +4,12 @@ from fbprophet.plot import plot_plotly
 import numpy
 import pandas as pd
 import plotly.offline as py
+import requests
 
-# Gets all cases in world by country and date.
-full_set = pd.read_csv('./data_sets/time_series_covid19_confirmed_US.csv')
+# Gets all cases in US for current date.
+# Uses most up to date data.
+full_set = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
 
-# Gets all cases in US by country and date.
-us_set = full_set[full_set['iso3'].str.contains("USA")]
 
 # Create Table with Total Cases and Date for US.
 
