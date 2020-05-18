@@ -8,7 +8,7 @@ import requests
 
 # Gets all cases in US for current date.
 # Uses most up to date data.
-full_set = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
+us_set = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
 
 
 # Create Table with Total Cases and Date for US.
