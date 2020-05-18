@@ -29,4 +29,5 @@ jobs:
     - name: Run Jupyter Notebook
     # Runs a single command using the runners shell
       run: pip install -r requirements.txt
+      run: ls && python src/covid_forecaster.py && jupyter notebook
    
