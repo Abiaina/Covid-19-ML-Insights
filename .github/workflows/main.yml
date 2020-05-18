@@ -24,6 +24,5 @@ jobs:
       
     - name: Run Jupyter Notebook
     # Runs a single command using the runners shell
-      run: python3 -m pip3 install -r requirements.txt
-
+      run: pip
    
