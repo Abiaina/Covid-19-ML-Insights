@@ -1,2 +1,6 @@
-fbprophet
-jupyterlab
+fbprophet==0.6
+jupyterlab==2.1.0
+numpy==1.18.3
+pandas==1.0.3
+plotly==4.6.0
+requests==2.23.0
