@@ -19,8 +19,7 @@ only_date_cases_us_set = us_set.drop(['UID','iso2','iso3','code3','FIPS','Admin2
 only_date_cases_us_set = only_date_cases_us_set.T
 only_date_cases_us_set = only_date_cases_us_set.sum(1)
 
-
-# print(only_date_cases_us_set.head())
+# Re-writes modified dataset so it can be used by FBProphet.
 df = pd.DataFrame(only_date_cases_us_set)
 df.to_csv('./modified_us_covid19_confirmed_cases.csv')
 
